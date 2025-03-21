@@ -7,10 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Надпись ASUDD MSE -->
+    <div class="label">ASUDD MSE</div>
+
+    <!-- Контейнер для дороги -->
     <div class="road-container">
-        <div class="road-lane" id="lane1"></div>
-        <div class="road-lane" id="lane2"></div>
+        <!-- Обочина слева -->
+        <div class="shoulder left"></div>
+        <!-- Дорога -->
+        <div class="road">
+            <!-- Краевая полоса слева -->
+            <div class="edge-line left"></div>
+            <!-- Полоса движения 1 -->
+            <div class="lane"></div>
+            <!-- Разделительная полоса -->
+            <div class="divider"></div>
+            <!-- Полоса движения 2 -->
+            <div class="lane"></div>
+            <!-- Краевая полоса справа -->
+            <div class="edge-line right"></div>
+        </div>
+        <!-- Обочина справа -->
+        <div class="shoulder right"></div>
+        <!-- Барьерное ограждение -->
+        <div class="barrier left"></div>
+        <div class="barrier right"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
