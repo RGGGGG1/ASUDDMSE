@@ -29,6 +29,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    background-color: #555; /* Цвет фона контейнера (для отладки) */
 }
 
 /* Обочина */
@@ -86,4 +87,22 @@ body {
     width: 20px;
     height: 100%;
     background-color: #FFD700; /* Желтый цвет для разделительной полосы */
-    margin: 0 10px; /* Отступы от
+    margin: 0 10px; /* Отступы от полос движения */
+}
+
+/* Барьерное ограждение */
+.barrier {
+    width: 10px;
+    height: 100%;
+    background-color: #C0C0C0; /* Серый металлический цвет */
+    position: absolute;
+    top: 0;
+}
+
+.barrier.left {
+    left: -90px; /* Позиция слева от дороги */
+}
+
+.barrier.right {
+    right: -90px; /* Позиция справа от дороги */
+}
