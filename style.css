@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     margin: 0;
     padding: 0;
@@ -5,36 +6,93 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #808080; /* Серый фон */
+    position: relative;
 }
 
+/* Надпись ASUDD MSE */
+.label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #FFFFFF; /* Белый цвет текста */
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Контейнер для дороги */
 .road-container {
-    width: 80%;
-    height: 200px;
-    background-color: #555;
+    width: 90%;
+    height: 300px;
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-.road-lane {
-    width: 45%;
+/* Обочина */
+.shoulder {
+    width: 50px;
     height: 100%;
-    background-color: #fff;
-    border: 2px dashed #ccc;
-    position: relative;
+    background-color: #8B4513; /* Коричневый цвет для обочины */
 }
 
-#lane1::before, #lane2::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #ccc;
-    transform: translateY(-50%);
+.shoulder.left {
+    margin-right: 10px; /* Отступ от дороги */
 }
+
+.shoulder.right {
+    margin-left: 10px; /* Отступ от дороги */
+}
+
+/* Дорога */
+.road {
+    flex-grow: 1;
+    height: 200px;
+    background-color: #000000; /* Черный цвет для асфальта */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Краевые полосы */
+.edge-line {
+    width: 10px;
+    height: 100%;
+    background-color: #FFFFFF; /* Белый цвет для краевых полос */
+}
+
+.edge-line.left {
+    margin-right: 20px; /* Отступ от разделительной полосы */
+}
+
+.edge-line.right {
+    margin-left: 20px; /* Отступ от разделительной полосы */
+}
+
+/* Полосы движения */
+.lane {
+    flex-grow: 1;
+    height: 100%;
+    border-right: 2px dashed #FFFFFF; /* Белая пунктирная линия для разделения полос */
+}
+
+.lane:last-child {
+    border-right: none; /* Убираем границу у последней полосы */
+}
+
+/* Разделительная полоса */
+.divider {
+    width: 20px;
+    height: 100%;
+    background-color: #FFD700; /* Желтый цвет для разделительной полосы */
+    margin: 0 10px; /* Отступы от полос движения */
+}
+
+/* Барьерное ограждение */
+.barrier {
+    width: 10px;
+    height: 100%;
+    background-color: #C0C0C0; /* Серый металлический цвет */
+    position: absolute;
+    top
