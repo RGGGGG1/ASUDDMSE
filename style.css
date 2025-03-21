@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.road-container {
+    width: 80%;
+    height: 200px;
+    background-color: #555;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.road-lane {
+    width: 45%;
+    height: 100%;
+    background-color: #fff;
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+#lane1::before, #lane2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ccc;
+    transform: translateY(-50%);
+}
