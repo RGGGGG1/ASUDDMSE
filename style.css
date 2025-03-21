@@ -25,8 +25,7 @@ body {
 /* Контейнер для дороги */
 .road-container {
     width: 100%; /* Дорога на всю ширину страницы */
-    height: 200px; /* Высота дороги */
-    position: relative;
+    height: 150px; /* Высота дороги */
     display: flex;
     align-items: center;
     background-color: #555; /* Цвет фона контейнера (для отладки) */
@@ -34,17 +33,9 @@ body {
 
 /* Обочина */
 .shoulder {
-    width: 80px; /* Ширина обочины */
+    width: 50px; /* Ширина обочины */
     height: 100%;
     background-color: #8B4513; /* Коричневый цвет для обочины */
-}
-
-.shoulder.left {
-    margin-right: 10px; /* Отступ от дороги */
-}
-
-.shoulder.right {
-    margin-left: 10px; /* Отступ от дороги */
 }
 
 /* Дорога */
@@ -54,21 +45,6 @@ body {
     background-color: #000000; /* Черный цвет для асфальта */
     display: flex;
     align-items: center;
-}
-
-/* Краевые полосы */
-.edge-line {
-    width: 10px;
-    height: 100%;
-    background-color: #FFFFFF; /* Белый цвет для краевых полос */
-}
-
-.edge-line.left {
-    margin-right: 20px; /* Отступ от разделительной полосы */
-}
-
-.edge-line.right {
-    margin-left: 20px; /* Отступ от разделительной полосы */
 }
 
 /* Полосы движения */
@@ -87,22 +63,4 @@ body {
     width: 20px;
     height: 100%;
     background-color: #FFD700; /* Желтый цвет для разделительной полосы */
-    margin: 0 10px; /* Отступы от полос движения */
-}
-
-/* Барьерное ограждение */
-.barrier {
-    width: 10px;
-    height: 100%;
-    background-color: #C0C0C0; /* Серый металлический цвет */
-    position: absolute;
-    top: 0;
-}
-
-.barrier.left {
-    left: -90px; /* Позиция слева от дороги */
-}
-
-.barrier.right {
-    right: -90px; /* Позиция справа от дороги */
 }
